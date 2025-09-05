@@ -20,20 +20,15 @@ Explorar como a análise de cohort pode ajudar empresas a:
 ---
 
 ## 📁 Estrutura do Repositório
-tableau-cohort-churn
-
-📁data: [cohort_subscriptions.xlsx](https://github.com/user-attachments/files/22180391/cohort_subscriptions.xlsx)
-
-📁workbook: https://public.tableau.com/views/AnliseCohort_17571015767650/Painel?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
-
-📁screenshots
-
-📸Painel_Total: 
-<img width="1599" height="1499" alt="Painel_Total" src="https://github.com/user-attachments/assets/1b49284f-c8ec-4a5e-abc2-20f337fb4f96" />
-
-📸Painel_Campanha: 
-<img width="1599" height="1499" alt="Painel_Campanha" src="https://github.com/user-attachments/assets/6a1bd703-3f46-4226-aa96-460f195a1f2e" />
-
+📦 tableau-cohort-churn
+┣ 📂 data
+┃ ┗ cohort_subscriptions.xlsx
+┣ 📂 workbook
+┃ ┗ Análise Cohort.twb
+┣ 📂 screenshots
+┃ ┗ Painel_Total.png
+┃ ┗ Painel_Campanha.png
+┗ README.md
 
 
 ---
