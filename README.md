@@ -20,15 +20,20 @@ Explorar como a análise de cohort pode ajudar empresas a:
 ---
 
 ## 📁 Estrutura do Repositório
-📦 tableau-cohort-churn
-┣ 📂 data
-┃ ┗ cohort_subscriptions.xlsx
-┣ 📂 workbook
-┃ ┗ Análise Cohort.twb
-┣ 📂 screenshots
-┃ ┗ Painel_Total.png
-┃ ┗ Painel_Campanha.png
-┗ README.md
+tableau-cohort-churn
+
+📁data: [cohort_subscriptions.xlsx](https://github.com/user-attachments/files/22180391/cohort_subscriptions.xlsx)
+
+📁workbook: https://public.tableau.com/views/AnliseCohort_17571015767650/Painel?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+📁screenshots
+
+📸Painel_Total: 
+<img width="1599" height="1499" alt="Painel_Total" src="https://github.com/user-attachments/assets/1b49284f-c8ec-4a5e-abc2-20f337fb4f96" />
+
+📸Painel_Campanha: 
+<img width="1599" height="1499" alt="Painel_Campanha" src="https://github.com/user-attachments/assets/6a1bd703-3f46-4226-aa96-460f195a1f2e" />
+
 
 
 ---
@@ -54,12 +59,6 @@ Explorar como a análise de cohort pode ajudar empresas a:
     - Avaliando o que causou isso, notamos que a Campanha A não tenha performado como esperado, indicando um ponto de atenção (avaliar se plataforma encontrou algum erro na campanha, verificar se houve alguma restrição da plataforma).
 - É possível notar que o desvio padrão não é alto, indicando um comportamento de usuários similar em ambas campanhas.
 
----
-
-## 📷 Screenshot
-![Painel Total](screenshots/Painel_Total.png)
-![Painel por Campanha](screenshots/Painel_Campanha.png)
-
 
 ---
 
@@ -73,7 +72,7 @@ Cada negócio possui suas próprias peculiaridades, e a aplicação prática des
 
 ## ▶️ Como usar
 1. Baixe os arquivos deste repositório.
-2. Abra o arquivo `Análise Cohort.twb` no Tableau Desktop. Ou faça download via link: https://public.tableau.com/views/AnliseCohort_17571015767650/Painel?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+2. Abra o arquivo realizando o download via link: https://public.tableau.com/views/AnliseCohort_17571015767650/Painel?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 3. Certifique-se de que o Excel (`cohort_subscriptions.xlsx`) esteja no caminho correto.
 4. Explore o dashboard interativo ajustando os parâmetros.
 
