@@ -23,11 +23,11 @@ Explorar como a análise de cohort pode ajudar empresas a:
 📦 tableau-cohort-churn
 ┣ 📂 data
 ┃ ┗ cohort_subscriptions.xlsx
-┣ 📂 workbook
-┃ ┗ Análise Cohort.twb
 ┣ 📂 screenshots
 ┃ ┗ Painel_Total.png
 ┃ ┗ Painel_Campanha.png
+┣ 📂 workbook
+┃ ┗ Análise Cohort.twb
 ┗ README.md
 
 
