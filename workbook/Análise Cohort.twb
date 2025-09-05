@@ -1,0 +1,1982 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <RefreshableParameterRanges />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='AnliseCohort_17571015767650' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+        <calculation class='tableau' formula='&quot;Total&quot;' />
+        <members>
+          <member value='&quot;Campanha&quot;' />
+          <member value='&quot;Total&quot;' />
+        </members>
+      </column>
+      <column caption='Parametro Permanencia' datatype='integer' name='[Parâmetro 2]' param-domain-type='range' role='measure' source-field='[federated.1jg5xo313vnkno10xeusn05cs98l].[permanencia_meses]' type='quantitative' value='12'>
+        <calculation class='tableau' formula='12' />
+      </column>
+    </datasource>
+    <datasource caption='Base Cohorts' inline='true' name='federated.1jg5xo313vnkno10xeusn05cs98l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cohort_subscriptions' name='excel-direct.0yvufvk1pg4dhr17oljft0w7eqy5'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/bruno/OneDrive/Documentos e Projetos/Portfolio Analytics/Tableau/Análise Cohort - 03-09/cohort_subscriptions.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0yvufvk1pg4dhr17oljft0w7eqy5' name='Cohort Detalhado' table='[&apos;Cohort Detalhado$&apos;]' type='table'>
+          <columns gridOrigin='A1:H1001:no:A1:H1001:0' header='yes' outcome='2'>
+            <column datatype='string' name='id_cliente' ordinal='0' />
+            <column datatype='date' name='data_compra' ordinal='1' />
+            <column datatype='string' name='campanha' ordinal='2' />
+            <column datatype='integer' name='permanencia_meses' ordinal='3' />
+            <column datatype='date' name='data_churn' ordinal='4' />
+            <column datatype='integer' name='ativo' ordinal='5' />
+            <column datatype='date' name='mês_ano_compra' ordinal='6' />
+            <column datatype='date' name='mês_ano_churn' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H1001:no:A1:H1001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_cliente</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[id_cliente]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>id_cliente</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPT_RBR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>data_compra</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[data_compra]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>data_compra</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>campanha</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[campanha]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>campanha</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPT_RBR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>permanencia_meses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[permanencia_meses]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>permanencia_meses</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>data_churn</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[data_churn]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>data_churn</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ativo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ativo]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>ativo</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mês_ano_compra</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[mês_ano_compra]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>mês_ano_compra</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mês_ano_churn</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[mês_ano_churn]</local-name>
+            <parent-name>[Cohort Detalhado]</parent-name>
+            <remote-alias>mês_ano_churn</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Visão' datatype='string' name='[Calculation_1052716462848020481]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[Parâmetro 1] = &quot;Campanha&quot; then [campanha]&#13;&#10;ELSE &quot;Total&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Entrantes' datatype='integer' name='[Calculation_558164928986787842]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED DATETRUNC(&apos;month&apos;, [data_compra]): &#13;&#10;COUNTD([id_cliente]) }' />
+      </column>
+      <column caption='Churn %' datatype='real' default-format='p0.0%' name='[Calculation_558164928994725894]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(COUNTD([id_cliente]))/SUM([Calculation_558164928986787842])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Entrantes / Total' datatype='real' default-format='p0.0%' name='[Calculation_558164928999727113]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_558164928986787842]) / SUM({ FIXED : SUM([Calculation_558164928986787842]) })' />
+      </column>
+      <column caption='Permanência Referência' datatype='integer' name='[Calculation_602919450343936000]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [permanencia_meses] &lt;= [Parameters].[Parâmetro 2]&#13;&#10;then [permanencia_meses]&#13;&#10;else NULL&#13;&#10;END' />
+      </column>
+      <column caption='Data Churn Tabela' datatype='string' name='[Calculation_602919450346696705]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if &#13;&#10;[data_churn] = NULL&#13;&#10;then &apos; &apos;&#13;&#10;ELSE str([data_churn])&#13;&#10;END' />
+        <aliases>
+          <alias key='%null%' value=' ' />
+        </aliases>
+      </column>
+      <column caption='Cohort Detalhado' datatype='table' name='[__tableau_internal_object_id__].[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Ativo' datatype='integer' name='[ativo]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Inativo' />
+          <alias key='1' value='Ativo' />
+        </aliases>
+      </column>
+      <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+      <column caption='Data Churn' datatype='date' name='[data_churn]' role='dimension' type='ordinal' />
+      <column caption='Data Compra' datatype='date' name='[data_compra]' role='dimension' type='ordinal' />
+      <column caption='Id Cliente' datatype='string' name='[id_cliente]' role='dimension' type='nominal' />
+      <column caption='Mês Ano Churn' datatype='date' name='[mês_ano_churn]' role='dimension' type='ordinal' />
+      <column caption='Mês Ano Compra' datatype='date' datatype-customized='true' name='[mês_ano_compra]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Permanencia Meses' datatype='integer' name='[permanencia_meses]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value=' ' />
+        </aliases>
+      </column>
+      <column-instance column='[permanencia_meses]' derivation='Avg' name='[avg:permanencia_meses:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[permanencia_meses]' derivation='Median' name='[med:permanencia_meses:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ativo]' derivation='None' name='[none:ativo:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='C:/Users/bruno/AppData/Local/Temp/TableauTemp/#TableauTemp_0vuxv7y10lb8dr121w0mz051ss14.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/05/2025 05:32:26 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id_cliente</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[id_cliente]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id_cliente</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LPT_RBR_S2' />
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>data_compra</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[data_compra]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>data_compra</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>482</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>campanha</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[campanha]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>campanha</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LPT_RBR_S2' />
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>permanencia_meses</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[permanencia_meses]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>permanencia_meses</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>data_churn</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[data_churn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>data_churn</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>297</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ativo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ativo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ativo</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mês_ano_compra</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[mês_ano_compra]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mês_ano_compra</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mês_ano_churn</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[mês_ano_churn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mês_ano_churn</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Cohort Detalhado</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='10000' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:ativo:ok]' palette='red_gold_10_0' type='palette'>
+            <map to='#c8d0d9'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#f05c4d'>
+              <bucket>0</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' palette='seattle_grays_10_0' type='palette'>
+            <map to='#b3b7b8'>
+              <bucket>&quot;[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+          <calculation class='tableau' formula='&quot;Total&quot;' />
+        </column>
+        <column caption='Parametro Permanencia' datatype='integer' name='[Parâmetro 2]' param-domain-type='range' role='measure' source-field='[federated.1jg5xo313vnkno10xeusn05cs98l].[permanencia_meses]' type='quantitative' value='12'>
+          <calculation class='tableau' formula='12' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Cohort Detalhado' id='Cohort Detalhado_CBA05422BD4E4AFB956B8F588FD58A00'>
+            <properties context=''>
+              <relation connection='excel-direct.0yvufvk1pg4dhr17oljft0w7eqy5' name='Cohort Detalhado' table='[&apos;Cohort Detalhado$&apos;]' type='table'>
+                <columns gridOrigin='A1:H1001:no:A1:H1001:0' header='yes' outcome='2'>
+                  <column datatype='string' name='id_cliente' ordinal='0' />
+                  <column datatype='date' name='data_compra' ordinal='1' />
+                  <column datatype='string' name='campanha' ordinal='2' />
+                  <column datatype='integer' name='permanencia_meses' ordinal='3' />
+                  <column datatype='date' name='data_churn' ordinal='4' />
+                  <column datatype='integer' name='ativo' ordinal='5' />
+                  <column datatype='date' name='mês_ano_compra' ordinal='6' />
+                  <column datatype='date' name='mês_ano_churn' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Cohort Churns'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Base Cohorts' name='federated.1jg5xo313vnkno10xeusn05cs98l' />
+            <datasource caption='Parâmetros' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+              <calculation class='tableau' formula='&quot;Total&quot;' />
+            </column>
+            <column caption='Parametro Permanencia' datatype='integer' name='[Parâmetro 2]' param-domain-type='range' role='measure' source-field='[federated.1jg5xo313vnkno10xeusn05cs98l].[permanencia_meses]' type='quantitative' value='12'>
+              <calculation class='tableau' formula='12' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1jg5xo313vnkno10xeusn05cs98l'>
+            <column caption='Visão' datatype='string' name='[Calculation_1052716462848020481]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parâmetro 1] = &quot;Campanha&quot; then [campanha]&#13;&#10;ELSE &quot;Total&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Entrantes' datatype='integer' name='[Calculation_558164928986787842]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED DATETRUNC(&apos;month&apos;, [data_compra]): &#13;&#10;COUNTD([id_cliente]) }' />
+            </column>
+            <column caption='Churn %' datatype='real' default-format='p0.0%' name='[Calculation_558164928994725894]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(COUNTD([id_cliente]))/SUM([Calculation_558164928986787842])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Entrantes / Total' datatype='real' default-format='p0.0%' name='[Calculation_558164928999727113]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_558164928986787842]) / SUM({ FIXED : SUM([Calculation_558164928986787842]) })' />
+            </column>
+            <column caption='Permanência Referência' datatype='integer' name='[Calculation_602919450343936000]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [permanencia_meses] &lt;= [Parameters].[Parâmetro 2]&#13;&#10;then [permanencia_meses]&#13;&#10;else NULL&#13;&#10;END' />
+            </column>
+            <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+            <column caption='Data Compra' datatype='date' name='[data_compra]' role='dimension' type='ordinal' />
+            <column caption='Id Cliente' datatype='string' name='[id_cliente]' role='dimension' type='nominal' />
+            <column caption='Mês Ano Compra' datatype='date' datatype-customized='true' name='[mês_ano_compra]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1052716462848020481]' derivation='None' name='[none:Calculation_1052716462848020481:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_602919450343936000]' derivation='None' name='[none:Calculation_602919450343936000:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[campanha]' derivation='None' name='[none:campanha:nk]' pivot='key' type='nominal' />
+            <column-instance column='[data_compra]' derivation='None' name='[none:data_compra:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mês_ano_compra]' derivation='None' name='[none:mês_ano_compra:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Permanencia Meses' datatype='integer' name='[permanencia_meses]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value=' ' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_558164928986787842]' derivation='Sum' name='[sum:Calculation_558164928986787842:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_558164928994725894]' derivation='User' name='[usr:Calculation_558164928994725894:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_558164928999727113]' derivation='User' name='[usr:Calculation_558164928999727113:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_602919450343936000:ok]' />
+              <groupfilter function='member' level='[none:Calculation_602919450343936000:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:campanha:nk]' member='&quot;Campanha A&quot;' />
+              <groupfilter function='member' level='[none:campanha:nk]' member='&quot;Campanha B&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:qk]' included-values='in-range'>
+            <min>#2024-01-07#</min>
+            <max>#2025-08-15#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[sum:Calculation_558164928986787842:ok]' />
+              <groupfilter function='member' level='[sum:Calculation_558164928986787842:ok]' member='%missing%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]</column>
+            <column>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:qk]</column>
+            <column>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]' value='56' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]' value='bold' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='bold' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='center' />
+            <format attr='vertical-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='center' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' value='center' />
+            <format attr='vertical-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' value='center' />
+            <format attr='font-size' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' value='8' />
+            <format attr='color' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' value='normal' />
+            <format attr='font-family' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' value='Tableau Book' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]' value='96' />
+            <format attr='font-weight' data-class='subtotal' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]' value='bold' />
+            <format attr='background-color' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928999727113:ok]' value='#f5f5f5' />
+            <format attr='background-color' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='#e6e6e6' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+            <format attr='border-width' scope='rows' value='1' />
+            <format attr='border-style' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]' value='bold' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='bold' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='center' />
+            <format attr='vertical-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]' value='center' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928999727113:ok]' value='bold' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928999727113:ok]' value='center' />
+            <format attr='text-format' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra:ok]' value='*mm/yy' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra:ok]' value='center' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra:ok]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.29999999999999999' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' max='1.0' min='0.0' num-steps='4' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#8cd17d</color>
+                <color>#9ad28e</color>
+                <color>#aad4a1</color>
+                <color>#b9d5b3</color>
+                <color>#c9d7c6</color>
+                <color>#d9d9d9</color>
+                <color>#dabfc0</color>
+                <color>#dca6a6</color>
+                <color>#dd8c8d</color>
+                <color>#df7173</color>
+                <color>#e15759</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='rows' value='0' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' />
+              <text column='[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000' indent='2880'>Mês de Data Compra:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[mn:data_compra:ok]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Visão:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Permanência Referência:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Ano de Data Compra:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[tmn:data_compra:qk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Entrantes:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Churn %:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Entrantes / Total:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928999727113:ok]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk] / ([federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra:ok] / ([federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok] / [federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928999727113:ok])))</rows>
+        <cols>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450343936000:ok]</cols>
+        <table-calculations>
+          <partitionable-measures>
+            <column>[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928999727113:ok]</column>
+          </partitionable-measures>
+        </table-calculations>
+      </table>
+      <simple-id uuid='{9764BF71-C281-4797-A88D-0FFEDE177F78}' />
+    </worksheet>
+    <worksheet name='Distribuição Clientes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Base Cohorts' name='federated.1jg5xo313vnkno10xeusn05cs98l' />
+            <datasource caption='Parâmetros' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+              <calculation class='tableau' formula='&quot;Total&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1jg5xo313vnkno10xeusn05cs98l'>
+            <column caption='Visão' datatype='string' name='[Calculation_1052716462848020481]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parâmetro 1] = &quot;Campanha&quot; then [campanha]&#13;&#10;ELSE &quot;Total&quot;&#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Ativo' datatype='integer' name='[ativo]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Inativo' />
+                <alias key='1' value='Ativo' />
+              </aliases>
+            </column>
+            <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+            <column-instance column='[id_cliente]' derivation='CountD' name='[ctd:id_cliente:qk]' pivot='key' type='quantitative' />
+            <column caption='Id Cliente' datatype='string' name='[id_cliente]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1052716462848020481]' derivation='None' name='[none:Calculation_1052716462848020481:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ativo]' derivation='None' name='[none:ativo:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[id_cliente]' derivation='CountD' name='[pcto:ctd:id_cliente:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <manual-sort column='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>1</bucket>
+              <bucket>0</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[ctd:id_cliente:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[pcto:ctd:id_cliente:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[pcto:ctd:id_cliente:qk]' scope='cols' value='false' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]' value='108' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]' />
+              <size column='[federated.1jg5xo313vnkno10xeusn05cs98l].[ctd:id_cliente:qk]' />
+              <text column='[federated.1jg5xo313vnkno10xeusn05cs98l].[pcto:ctd:id_cliente:qk]' />
+              <text column='[federated.1jg5xo313vnkno10xeusn05cs98l].[ctd:id_cliente:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000' indent='2880'>Ativo:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Visão:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Contagem Cliente:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[ctd:id_cliente:qk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>% do Total:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[pcto:ctd:id_cliente:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]</rows>
+        <cols>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]</cols>
+      </table>
+      <simple-id uuid='{27531985-5BA1-4AAC-B72E-23706A8DE068}' />
+    </worksheet>
+    <worksheet name='TMP Detalhado'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Base Cohorts' name='federated.1jg5xo313vnkno10xeusn05cs98l' />
+            <datasource caption='Parâmetros' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+              <calculation class='tableau' formula='&quot;Total&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1jg5xo313vnkno10xeusn05cs98l'>
+            <column caption='Visão' datatype='string' name='[Calculation_1052716462848020481]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parâmetro 1] = &quot;Campanha&quot; then [campanha]&#13;&#10;ELSE &quot;Total&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[permanencia_meses]' derivation='Avg' name='[avg:permanencia_meses:qk]' pivot='key' type='quantitative' />
+            <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+            <column caption='Data Compra' datatype='date' name='[data_compra]' role='dimension' type='ordinal' />
+            <column-instance column='[permanencia_meses]' derivation='Median' name='[med:permanencia_meses:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[data_compra]' derivation='Month' name='[mn:data_compra:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[data_compra]' derivation='MY' name='[my:data_compra:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1052716462848020481]' derivation='None' name='[none:Calculation_1052716462848020481:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' caption='Permanencia Meses' datatype='integer' name='[permanencia_meses]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value=' ' />
+              </aliases>
+            </column>
+            <column-instance column='[data_compra]' derivation='Year' name='[yr:data_compra:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]' scope='rows' value='Permanencia Meses' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]' value='100' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[my:data_compra:ok]' value='-90' />
+            <format attr='text-orientation' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]' value='0' />
+            <format attr='text-orientation' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[mn:data_compra:ok]' value='0' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000' indent='2880'>Mês de Data Compra:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[mn:data_compra:ok]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Visão:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Ano de Data Compra:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Média de Permanencia Meses:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]>]]></run>
+                <run indent='2880'>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' indent='2880'>Mediana de Permanencia Meses:&#9;</run>
+                <run fontcolor='#666666' indent='2880'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-disallow' y-axis-name='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000'>Mês de Data Compra:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[mn:data_compra:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Visão:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Ano de Data Compra:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Média de Permanencia Meses:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Mediana de Permanencia Meses:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4172928333282471' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-disallow' y-axis-name='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000'>Mês de Data Compra:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[mn:data_compra:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Visão:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Ano de Data Compra:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Média de Permanencia Meses:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Mediana de Permanencia Meses:&#9;</run>
+                <run fontcolor='#666666'><![CDATA[<[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.41679558157920837' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk] * ([federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:qk] + [federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:qk]))</rows>
+        <cols>([federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok] / [federated.1jg5xo313vnkno10xeusn05cs98l].[mn:data_compra:ok])</cols>
+      </table>
+      <simple-id uuid='{1A7E4E81-0A97-4460-BFEC-FBAA1ACDF506}' />
+    </worksheet>
+    <worksheet name='TMP Geral'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Base Cohorts' name='federated.1jg5xo313vnkno10xeusn05cs98l' />
+            <datasource caption='Parâmetros' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+              <calculation class='tableau' formula='&quot;Total&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1jg5xo313vnkno10xeusn05cs98l'>
+            <column caption='Visão' datatype='string' name='[Calculation_1052716462848020481]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parâmetro 1] = &quot;Campanha&quot; then [campanha]&#13;&#10;ELSE &quot;Total&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[permanencia_meses]' derivation='Avg' name='[avg:permanencia_meses:ok]' pivot='key' type='ordinal' />
+            <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+            <column-instance column='[permanencia_meses]' derivation='Median' name='[med:permanencia_meses:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1052716462848020481]' derivation='None' name='[none:Calculation_1052716462848020481:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' caption='Permanencia Meses' datatype='integer' name='[permanencia_meses]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value=' ' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='n#,##0.00;-#,##0.00' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='bold' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='center' />
+            <format attr='color' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='#000000' />
+            <format attr='text-align' value='center' />
+            <format attr='text-format' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]' value='108' />
+            <format attr='height-header' value='42' />
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='104' />
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]' value='56' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='font-style' value='normal' />
+            <format attr='text-orientation' value='0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='n#,##0.00;-#,##0.00' />
+            <format attr='font-weight' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='bold' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' value='center' />
+            <format attr='color' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]' value='#f28e2b' />
+            <format attr='text-align' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
+            <format attr='font-size' value='9' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]' />
+              <text column='[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{4859526C-C0CA-4AE5-817C-D48FBBC26635}' />
+    </worksheet>
+    <worksheet name='Tabela Detalhada'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Base Cohorts' name='federated.1jg5xo313vnkno10xeusn05cs98l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jg5xo313vnkno10xeusn05cs98l'>
+            <column caption='Data Churn Tabela' datatype='string' name='[Calculation_602919450346696705]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if &#13;&#10;[data_churn] = NULL&#13;&#10;then &apos; &apos;&#13;&#10;ELSE str([data_churn])&#13;&#10;END' />
+              <aliases>
+                <alias key='%null%' value=' ' />
+              </aliases>
+            </column>
+            <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+            <column caption='Data Churn' datatype='date' name='[data_churn]' role='dimension' type='ordinal' />
+            <column caption='Data Compra' datatype='date' name='[data_compra]' role='dimension' type='ordinal' />
+            <column caption='Id Cliente' datatype='string' name='[id_cliente]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_602919450346696705]' derivation='None' name='[none:Calculation_602919450346696705:nk]' pivot='key' type='nominal' />
+            <column-instance column='[campanha]' derivation='None' name='[none:campanha:nk]' pivot='key' type='nominal' />
+            <column-instance column='[data_compra]' derivation='None' name='[none:data_compra:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[id_cliente]' derivation='None' name='[none:id_cliente:nk]' pivot='key' type='nominal' />
+            <column-instance column='[permanencia_meses]' derivation='None' name='[none:permanencia_meses:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Permanencia Meses' datatype='integer' name='[permanencia_meses]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value=' ' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='142' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:permanencia_meses:ok]' value='224' />
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450346696705:nk]' value='224' />
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:ok]' value='196' />
+            <format attr='width' field='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:id_cliente:nk]' value='232' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1jg5xo313vnkno10xeusn05cs98l].[none:id_cliente:nk] / ([federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:ok] / ([federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450346696705:nk] / [federated.1jg5xo313vnkno10xeusn05cs98l].[none:permanencia_meses:ok])))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{A3393470-650F-44D2-9B1E-01FDB4D948B0}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Painel'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='font-weight' value='bold' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='font-weight' value='bold' />
+          <format attr='text-align' value='left' />
+        </style-rule>
+      </style>
+      <size maxheight='1500' maxwidth='1600' minheight='1500' minwidth='1600' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Parâmetros' name='Parameters' />
+        <datasource caption='Base Cohorts' name='federated.1jg5xo313vnkno10xeusn05cs98l' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Visão Cohort' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Total&quot;'>
+          <calculation class='tableau' formula='&quot;Total&quot;' />
+          <members>
+            <member value='&quot;Campanha&quot;' />
+            <member value='&quot;Total&quot;' />
+          </members>
+        </column>
+        <column caption='Parametro Permanencia' datatype='integer' name='[Parâmetro 2]' param-domain-type='range' role='measure' source-field='[federated.1jg5xo313vnkno10xeusn05cs98l].[permanencia_meses]' type='quantitative' value='12'>
+          <calculation class='tableau' formula='12' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1jg5xo313vnkno10xeusn05cs98l'>
+        <column caption='Campanha' datatype='string' name='[campanha]' role='dimension' type='nominal' />
+        <column caption='Data Compra' datatype='date' name='[data_compra]' role='dimension' type='ordinal' />
+        <column-instance column='[campanha]' derivation='None' name='[none:campanha:nk]' pivot='key' type='nominal' />
+        <column-instance column='[data_compra]' derivation='None' name='[none:data_compra:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='80334' id='31' param='horz' type-v2='layout-flow' w='99000' x='500' y='533'>
+            <zone h='80334' id='29' type-v2='layout-basic' w='99000' x='500' y='533'>
+              <zone h='73400' id='20' param='horz' type-v2='layout-flow' w='99000' x='500' y='7467'>
+                <zone h='73400' id='18' type-v2='layout-basic' w='99000' x='500' y='7467'>
+                  <zone h='36953' id='17' name='Cohort Churns' w='73500' x='500' y='7467'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='33267' id='22' name='TMP Detalhado' w='81250' x='18250' y='47600'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='33267' id='47' name='TMP Geral' w='14813' x='500' y='47600'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='3180' id='51' type-v2='empty' w='99000' x='500' y='44420'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='33267' id='52' type-v2='empty' w='2937' x='15313' y='47600'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='32481' id='24' name='Distribuição Clientes' w='23500' x='76000' y='7467'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='36953' id='69' type-v2='empty' w='2000' x='74000' y='7467'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4472' id='84' type-v2='empty' w='23500' x='76000' y='39948'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='4779' id='28' param='horz' type-v2='layout-flow' w='99000' x='500' y='533'>
+                <zone fixed-size='437' h='4779' id='64' is-fixed='true' name='Cohort Churns' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:qk]' type-v2='filter' values='database' w='27813' x='500' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='57' h='4779' id='71' is-fixed='true' type-v2='empty' w='4063' x='28313' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='194' h='4779' id='36' is-fixed='true' mode='compact' param='[Parameters].[Parâmetro 1]' type-v2='paramctrl' w='12625' x='32376' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='80' h='4779' id='72' is-fixed='true' type-v2='empty' w='5500' x='45001' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='4779' id='78' mode='checkdropdown' name='Cohort Churns' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]' type-v2='filter' values='database' w='10500' x='50501' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='54' h='4779' id='79' is-fixed='true' type-v2='empty' w='3875' x='61001' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='4779' id='63' mode='slider' param='[Parameters].[Parâmetro 2]' type-v2='paramctrl' w='32249' x='64876' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='30' h='4779' id='70' is-fixed='true' type-v2='empty' w='2375' x='97125' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='2155' id='48' type-v2='empty' w='99000' x='500' y='5312'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='16467' id='67' name='Tabela Detalhada' w='84313' x='500' y='83000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='2133' id='68' type-v2='empty' w='99000' x='500' y='80867'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='16467' id='77' type-v2='empty' w='14687' x='84813' y='83000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='5000' id='87' type-v2='text' w='9563' x='750' y='54000'>
+          <formatted-text>
+            <run>Orderm Dados:&#10;Média&#10;Mediana</run>
+          </formatted-text>
+        </zone>
+        <zone h='3067' id='89' name='TMP Detalhado' pane-specification-id='1' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' show-title='false' type-v2='color' w='15813' x='83000' y='48533' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='105' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98934' id='104' param='vert' type-v2='layout-flow' w='99000' x='500' y='533'>
+                <zone fixed-size='194' h='4779' id='36' mode='compact' param='[Parameters].[Parâmetro 1]' type-v2='paramctrl' w='12625' x='32376' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4779' id='63' mode='slider' param='[Parameters].[Parâmetro 2]' type-v2='paramctrl' w='32249' x='64876' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='437' h='4779' id='64' name='Cohort Churns' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:qk]' type-v2='filter' values='database' w='27813' x='500' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4779' id='78' mode='checkdropdown' name='Cohort Churns' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]' type-v2='filter' values='database' w='10500' x='50501' y='533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36953' id='17' is-fixed='true' name='Cohort Churns' w='73500' x='500' y='7467'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32481' id='24' is-fixed='true' name='Distribuição Clientes' w='23500' x='76000' y='7467'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33267' id='47' is-fixed='true' name='TMP Geral' w='14813' x='500' y='47600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33267' id='22' is-fixed='true' name='TMP Detalhado' w='81250' x='18250' y='47600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3067' id='89' name='TMP Detalhado' pane-specification-id='1' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' show-title='false' type-v2='color' w='15813' x='83000' y='48533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5000' id='87' type-v2='text' w='9563' x='750' y='54000'>
+                  <formatted-text>
+                    <run>Orderm Dados:&#10;Média&#10;Mediana</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='239' h='16467' id='67' is-fixed='true' name='Tabela Detalhada' w='84313' x='500' y='83000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{DE2EE2EF-76C3-483A-975A-702CB1201B5E}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='Painel'>
+      <viewpoints>
+        <viewpoint name='Cohort Churns'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Distribuição Clientes'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='TMP Detalhado'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='TMP Geral'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tabela Detalhada'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='36' />
+      <simple-id uuid='{A1E34150-A458-471C-8FF5-33606F7723F5}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Cohort Churns'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card mode='compact' param='[Parameters].[Parâmetro 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parâmetro 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Parameters].[Parâmetro 1]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Campanha:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:M formatado:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:data_compra:qk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:id_cliente:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra (Cohort Detalhado):qk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:mês_ano_compra:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:permanencia_meses:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Calculation_558164928986787842:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[sum:Entrantes:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_1405123133674520578:qk:2]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[usr:Calculation_558164928994725894:qk:1]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:mês_ano_compra:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E14BA0AB-4FD2-4EEE-9124-529CE44789FE}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Distribuição Clientes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card mode='compact' param='[Parameters].[Parâmetro 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]' type='color' />
+            <card pane-specification-id='0' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[ctd:id_cliente:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:id_cliente:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B14615EB-1FA9-4F91-A305-FA3C11C4AFBF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TMP Detalhado'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card pane-specification-id='1' param='[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]' type='color' />
+            <card mode='compact' param='[Parameters].[Parâmetro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[dy:mês_ano_compra (Cohort Detalhado):ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[my:mês_ano_compra (Cohort Detalhado):ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:permanencia_meses:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[qr:mês_ano_compra (Cohort Detalhado):ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:mês_ano_compra (Cohort Detalhado):ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:mês_ano_compra:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9114FD31-2858-4EE8-896D-7371A224FFE2}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TMP Geral'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parâmetro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[:Measure Names]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[avg:permanencia_meses:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[med:permanencia_meses:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_1052716462848020481:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:ativo:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:permanencia_meses:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1909561E-676A-4858-8AE9-C5F8CD398DDB}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Tabela Detalhada'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:Calculation_602919450346696705:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:campanha:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:id_cliente:nk]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[none:permanencia_meses:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_churn:ok]</field>
+            <field>[federated.1jg5xo313vnkno10xeusn05cs98l].[yr:data_compra:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2236DE7A-61AB-42F6-AD1A-DBC7F4EB338A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Painel' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
