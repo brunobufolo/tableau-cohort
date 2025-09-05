@@ -73,7 +73,7 @@ Cada negócio possui suas próprias peculiaridades, e a aplicação prática des
 
 ## ▶️ Como usar
 1. Baixe os arquivos deste repositório.
-2. Abra o arquivo `Análise Cohort.twb` no Tableau Desktop.
+2. Abra o arquivo `Análise Cohort.twb` no Tableau Desktop. Ou faça download via link: https://public.tableau.com/views/AnliseCohort_17571015767650/Painel?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 3. Certifique-se de que o Excel (`cohort_subscriptions.xlsx`) esteja no caminho correto.
 4. Explore o dashboard interativo ajustando os parâmetros.
 
